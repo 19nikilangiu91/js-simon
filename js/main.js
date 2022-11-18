@@ -31,19 +31,23 @@ myButton.addEventListener("click",
 
         myShowNumber.innerHTML = myArrayFiveNumbers;
 
-        // 8) Andiamo a creare la nostra funzione per il  "timer" di "30 sec" per i nostri numeri.
+        // 8) Andiamo a inserire il nostro "array" nel ciclo "for" e andiamoa creare una funzione per il  "timer" di "30 sec" per i nostri numeri.
 
-        let trentaSec = 5;
+        for (let i = 0; i < myArrayFiveNumbers.length; i++) {
+          
+            let trentaSec = 5;
 
-        let timer = setInterval(function(){
-            if(trentaSec === 0){
-                clearInterval(timer);
-                myShowNumber.classList.add("hidden");
-            }else
-                trentaSec--;
-                console.log(trentaSec);
-        }, 1000);
-
+            let timer = setInterval(function(){
+                if(trentaSec === 0){
+                    clearInterval(timer);
+                    myShowNumber.classList.add("hidden");
+                    
+                    let numeri = parseInt(prompt("Inserisci il numero"));
+                }else
+                    trentaSec--;
+                    console.log(trentaSec);
+            }, 1000);
+        };
     } 
 )
 
