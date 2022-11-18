@@ -12,11 +12,17 @@ let myButton = document.getElementById("mystart");
 
 let myShowNumber = document.getElementById("show-number");
 
-// 6) Andiamo a collegare al click il nostro bottone.
+// // 6) Andiamo a creare una classe "hidden"
+
+myShowNumber.classList.add("hidden");
+
+// 7) Andiamo a collegare al click il nostro bottone.
 
 myButton.addEventListener("click",
 
     function(){
+
+        myShowNumber.classList.remove("hidden");
 
         // 3)Andiamo a creare un array di 100 numeri includendo i 5 numeri che ci serivranno.
 
@@ -24,6 +30,20 @@ myButton.addEventListener("click",
         console.log(myArrayFiveNumbers);
 
         myShowNumber.innerHTML = myArrayFiveNumbers;
+
+        // 8) Andiamo a creare la nostra funzione per il  "timer" di "30 sec" per i nostri numeri.
+
+        let trentaSec = 5;
+
+        let timer = setInterval(function(){
+            if(trentaSec === 0){
+                clearInterval(timer);
+                myShowNumber.classList.add("hidden");
+            }else
+                trentaSec--;
+                console.log(trentaSec);
+        }, 1000);
+
     } 
 )
 

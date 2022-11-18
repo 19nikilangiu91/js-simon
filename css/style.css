@@ -1,0 +1,11 @@
+#show-number{
+    width: 20%;
+    height: 15vh;
+    /* DEBUG */
+    background-color: blue;
+    color: white;
+}
+
+.hidden{
+    display: none;
+}
