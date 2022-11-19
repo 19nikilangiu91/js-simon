@@ -36,24 +36,30 @@ myButton.addEventListener("click",
         let trentaSec = 3 ;
 
         let timer = setInterval(function(){
-            if(trentaSec === 0){
+            if(trentaSec === -1){
                 myShowNumber.innerHTML = '';
                 myShowNumber.classList.add("hidden");
                 clearInterval(timer);
                 myShowNumber.classList.remove("hidden");
+
+                let mioArray =[];
+
+                for (let i = 0; i < myArrayFiveNumbers.length; i++) {
+                    let numeri = parseInt(prompt(`Inserisci i numeri`));
+                    if(myArrayFiveNumbers.includes(numeri)){
+                        mioArray.push(numeri);
+                        console.log(`Hai indovinato ${mioArray.lenght} numeri`);
+                    }else{
+                        console.log("Non hai indovinato nesseun numero");
+                    }
+                // myShowNumber.append(numeri);
+                // console.log(numeri);
+                }
             }else
                 trentaSec--;
                 console.log(trentaSec);
 
         }, 1000)
-
-        let numeri =[];
-
-            for (let i = 0; i < myArrayFiveNumbers.length; i++) {
-                numeri = parseInt(prompt(`Inserisci i numeri`));
-                // myShowNumber.append(numeri);
-                // console.log(numeri);
-        }
     }
 )
 
