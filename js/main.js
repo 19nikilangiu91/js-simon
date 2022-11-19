@@ -33,22 +33,28 @@ myButton.addEventListener("click",
 
         // 8) Andiamo a inserire il nostro "array" nel ciclo "for" e andiamoa creare una funzione per il  "timer" di "30 sec" per i nostri numeri.
 
-        for (let i = 0; i < myArrayFiveNumbers.length; i++) {
-          
-            let trentaSec = 5;
+        let trentaSec = 3 ;
 
-            let timer = setInterval(function(){
-                if(trentaSec === 0){
-                    clearInterval(timer);
-                    myShowNumber.classList.add("hidden");
-                    
-                    let numeri = parseInt(prompt("Inserisci il numero"));
-                }else
-                    trentaSec--;
-                    console.log(trentaSec);
-            }, 1000);
-        };
-    } 
+        let timer = setInterval(function(){
+            if(trentaSec === 0){
+                myShowNumber.innerHTML = '';
+                myShowNumber.classList.add("hidden");
+                clearInterval(timer);
+                myShowNumber.classList.remove("hidden");
+            }else
+                trentaSec--;
+                console.log(trentaSec);
+
+        }, 1000)
+
+        let numeri =[];
+
+            for (let i = 0; i < myArrayFiveNumbers.length; i++) {
+                numeri = parseInt(prompt(`Inserisci i numeri`));
+                // myShowNumber.append(numeri);
+                // console.log(numeri);
+        }
+    }
 )
 
 // 1) Andiamo a creare la nostra "Funzione" per generare i numeri random da "1" a "100", includendo i "5" numeri che ci serviranno.
