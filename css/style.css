@@ -1,5 +1,5 @@
 #show-number{
-    width: 30%;
+    width: 50%;
     height: 15vh;
     /* DEBUG */
     background-color: blue;
@@ -8,4 +8,15 @@
 
 .hidden{
     display: none;
+}
+
+#text{
+    background-color: blue;
+    color: white;
+}
+
+#output{
+    background-color: blue;
+    color: white;
+    width: 100%;
 }
